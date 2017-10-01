@@ -9,7 +9,7 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-    char znak;// +,-,*./;
+    char znak;// +,-,*,/;
     int a, b;
     a = b = 0;
     
@@ -20,6 +20,15 @@ int main(int argc, char **argv)
     cin >> a >> b ;
     if (znak == '+')
     { cout << a+b << endl;
+    }
+    if (znak == '-')
+    { cout << a-b << endl;
+    }
+    if (znak == '*')
+    { cout << a*b << endl;
+    }
+    if (znak == '/')
+    { cout << a/b << endl;
     }
     return 0;
 }
