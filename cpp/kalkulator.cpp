@@ -19,16 +19,20 @@ int main(int argc, char **argv)
     cout << "Podaj dwie liczby:" << endl;
     cin >> a >> b ;
     if (znak == '+')
-    { cout << a+b << endl;
+    {
+        cout << a+b << endl;
     }
     if (znak == '-')
-    { cout << a-b << endl;
+    { 
+        cout << a-b << endl;
     }
     if (znak == '*')
-    { cout << a*b << endl;
+    { 
+        cout << a*b << endl;
     }
     if (znak == '/')
-    { cout << a/b << endl;
+    { 
+        cout << a/b << endl;
     }
     return 0;
 }
