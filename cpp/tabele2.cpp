@@ -33,7 +33,6 @@ int sumuj (int tab [], int ile)
 int liczsrednia (int tab [], int ile)
 {
     return sumuj(tab, ile)/(ile);
-    
 }
 
 
@@ -51,7 +50,7 @@ int main(int argc, char **argv)
     
     cout << "Suma liczb: " << sumuj(liczby, rozmiar) << endl;
     
-    cout << "średnia artmetyczna: " << liczsrednia(liczba, rozmiar) << endl;
+    cout << "średnia artmetyczna: " << liczsrednia(liczby, rozmiar) << endl;
     
     
     
