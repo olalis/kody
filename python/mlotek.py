@@ -3,6 +3,7 @@
 
 from random import randint
 
+
 def losuj(ileliczb, maksliczb):
     liczby = []
     ile = 0  # ilość wylosowanych liczb
@@ -12,21 +13,36 @@ def losuj(ileliczb, maksliczb):
         if liczby.count(liczba) == 0:
             liczby.append(liczba)
             ile += 1
-    print (liczby)
+    return liczby
+
+
+def pobierz_typy(ileliczb):
+    typy = set()  # Pusty zbiór
+    ile = 0  # ilość podanych typów
+    while ile < ileliczb:
+        # for i in range(ileliczb):
+        typ = input("Podaj typ: ")
+        if typ not in typy:
+            typy.add(typ)
+            ile += 1
+    return typy
+
 
 def main(args):
     ileliczb = int(input('ile liczb chcesz zgadnąć?'))
     maksliczb = int(input("Podaj górny zakres: "))
 
-    losuj(ileliczb, maksliczb)
+    while ileliczb > maksliczb:
+        ileliczb = int(input('ile liczb chcesz zgadnąć z %s?' % maksliczb))
 
-    typy = set()  #Pusty zbiór
-    for i in range(ileliczb):
-        typ = input("Podaj typ: ")
-        typy.add(typ)
+    liczby = losuj(ileliczb, maksliczb)
 
+    typy = pobierz_typy(ileliczb)
+
+    print (liczby)
     print (typy)
-
+    trafione = set(liczby) & typy
+    print (trafione)
     return 0
 
 
