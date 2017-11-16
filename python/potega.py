@@ -4,15 +4,25 @@
 # a1 = a
 # an = a * ... * a (n-czynników) dla N+ - {0, 1}
 
+    
 def potega_it(podstawa, wykladnik):
-    """Funkcja oblicza iteracyjnie potęgę liczby naturalnej"""
-    wynik =
-    for i in range(wykładnik)
-        wynik =
+    
+    i = 1
+    wynik = 1
+    while i <= wykladnik:
+        wynik = wynik * podstawa
+        i = i + 1
+        
     return wynik
+        
 
 
 def main(args):
+    podstawa = int (input ('Podaj podstawę: '))
+    wykładnik = int (input ('Podaj wykładnik: '))
+    
+    print('Wynik: ', potega_it(podstawa, wykładnik))
+    
     return 0
 
 
