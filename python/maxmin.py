@@ -11,10 +11,18 @@ def minmax(lista):
         if lista[indeks] > lista[indeks + 1]:
             lmin.append(lista[indeks + 1])
             lmax.append(lista[indeks])
+<<<<<<< HEAD
         else:
             lmin.append(lista[indeks])
             lmax.append(lista[indeks + 1])
         indeks += 2
+=======
+            indeks += 2
+        else:
+            lmin.append(lista[indeks])
+            lmax.append(lista[indeks + 1])
+            indeks += 2
+>>>>>>> abd1e3f76ca910b635bcd41486d333701118195e
     return lmin, lmax
 
 
