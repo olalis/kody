@@ -21,17 +21,18 @@ int fib_iter(int n)
     {   tmp = b;
         b = a + b;
         a = tmp;
+        cout << a << " " << b << " " << "Iloraz: " << b / a << endl;
     }
-    cout << a << " " << b << " " << b / a << endl;
+    cout << a << " " << b << " " << "Iloraz: " << b / a << endl;
     return b;
 }
 
 int main(int argc, char **argv)
 {
-    int n;
+    int n = 0;
     cout << "Numer wyrazu ciągu: " << endl;
     cin >> n;
-    printf("Wyraz %d = %d", n, fib_iter(n));    
+    cout << fib_iter(n) << endl;    
     return 0;
 }
 
