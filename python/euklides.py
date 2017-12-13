@@ -18,15 +18,23 @@ def euklides2(a, b):
     return b
 
 
+def euklides_rek(a, b):
+    if (b == 0):
+        return a
+    return euklides_rek(b, a % b)
+
+
 def main(args):
     a = int(input('Podaj liczbę: '))
     b = int(input('Podaj liczbę: '))
 
     assert euklides(1989, 867) == 51
     assert euklides2(5, 10) == 5
+    assert euklides_rek(5, 10) == 5
 
     print('Największy wspólny dzielnik: ', euklides2(a, b))
     print("nwd({:d}, {:d}) = {:d}" .format(a, b, euklides(a, b)))
+    print('Największy wspólny dzielnik: ', euklides_rek(a, b))
 
     return 0
 

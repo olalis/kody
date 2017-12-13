@@ -19,6 +19,15 @@ int silnia_it(int liczba)
     return wynik;
 }   
 
+int silnia_rek(int liczba)
+{
+    if (liczba < 2)
+    {
+        return 1;
+    }
+    return silnia_rek(liczba - 1) * liczba;
+}
+
 int main(int argc, char **argv)
 {
     int liczba = 0;
@@ -27,6 +36,7 @@ int main(int argc, char **argv)
     cin >> liczba ; 
     
     cout << "Wynik: " << silnia_it(liczba) << endl;
+    cout << "Wynik: " << silnia_rek(liczba) << endl;
     
     return 0;
 }

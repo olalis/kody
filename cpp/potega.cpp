@@ -19,6 +19,15 @@ int potega_it(int podstawa, int wykladnik)
     return wynik;
 }   
 
+int potega_rek(int podstawa, int wykladnik)
+{
+    if (wykladnik == 0)
+    {
+        return 1;
+    }
+    return potega_rek(podstawa, wykladnik - 1) * podstawa;
+}
+
 int main(int argc, char **argv)
 {
     int podstawa = 0;
@@ -30,6 +39,7 @@ int main(int argc, char **argv)
     cin >> wykladnik ; 
     
     cout << "Wynik: " << potega_it(podstawa, wykladnik) << endl;
+    cout << "Wynik: " << potega_rek(podstawa, wykladnik) << endl;
     
     return 0;
 }
