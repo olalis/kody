@@ -46,8 +46,7 @@ def fib_iter2(n):
 def main(args):
     n = int(input("Podaj ilość liczb w ciągu"))
 
-    for i in range(n):
-        print (fib_rek(n))
+    print (fib_rek(n))
     # print (fib_iter(n))
     # print (fib_iter2(n))
     return 0
