@@ -3,7 +3,11 @@
 
 from turtle import *
 
+<<<<<<< HEAD
 droga = 8
+=======
+droga = 3
+>>>>>>> 2f48727d9e37d574d882da4183a0d79b6b1e2d25
 
 def c(t):
     if t > 0:

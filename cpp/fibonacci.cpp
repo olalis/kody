@@ -27,12 +27,28 @@ int fib_iter(int n)
     return b;
 }
 
+int fib_rek(int n)
+{
+    if (n < 2)
+    {
+        return 1;
+    }
+    return fib_rek(n - 2) + fib_rek(n - 1);
+}
+
 int main(int argc, char **argv)
 {
     int n = 0;
     cout << "Numer wyrazu ciągu: " << endl;
     cin >> n;
+<<<<<<< HEAD
     cout << fib_iter(n) << endl;    
+=======
+    cout << fib_iter(n) << endl; 
+    cout << "  " << endl; 
+    cout << fib_rek(n) << endl; 
+       
+>>>>>>> 2f48727d9e37d574d882da4183a0d79b6b1e2d25
     return 0;
 }
 
