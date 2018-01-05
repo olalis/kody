@@ -1,5 +1,5 @@
 /*
- * binarnie.cpp
+ * sort_wstaw.cpp
  */
 
 

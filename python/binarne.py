@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from mathimpart floor
+from math import floor
+
 
 def wyszukaj_liniowo(l, el):
     for i in range(0, len(l)):
@@ -10,7 +11,7 @@ def wyszukaj_liniowo(l, el):
     return -1
 
 
-#int wyszukaj_liniowo(int l[], int n, int el)
+# int wyszukaj_liniowo(int l[], int n, int el)
 #    {
 #        for(int i = 0; i < n; i++)
 #        {
@@ -22,19 +23,42 @@ def wyszukaj_liniowo(l, el):
 
 
 def wyszukaj_binarnie(l, el):
-    lewy, prawy = 0, len(lista) - 1
+    lewy, prawy = 0, len(l) - 1
     while lewy < prawy:
         srodek = floor((lewy + prawy) / 2)
+        if el <= l[srodek]:
+            prawy = srodek
+        else:
+            lewy = srodek + 1
+    if l[lewy] == el:
+        return lewy
 
+    return -1
+
+
+def wyszukaj_bin_rek(lewy, prawy, lista, el):
+    if lewy > prawy:
+        return -1  # elementu nie znaleziono
+
+    srodek = floor((lewy + prawy) / 2)
+    if el == lista[srodek]:
+        return srodek  # znaoleziono element
+
+    if el < lista[srodek]:
+        return wyszukaj_bin_rek(lewy, srodek - 1, lista, el)
+    else:
+        return wyszukaj_bin_rek(srodek + 1, prawy, lista, el)
 
 
 def main(args):
     lista = [4, 3, 7, 0, 2, 3, 1, 9, -4]
     lista.sort()
     el = 3
-    print(wyszukaj_liniowo(lista, el))
-    assert (wyszukaj_liniowo(lista, 8) == -1)
-    wyszukaj_binarnie(lista, el)
+    print(lista)
+    # print(wyszukaj_liniowo(lista, el))
+    # assert (wyszukaj_liniowo(lista, 8) == -1)
+    print(wyszukaj_binarnie(lista, el))
+    print(wyszukaj_bin_rek(0, len(lista) - 1, lista, el))
     return 0
 
 

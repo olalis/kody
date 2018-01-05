@@ -28,6 +28,31 @@ def sort_wstaw_mal(lista):
     return lista
 
 
+def wyszukaj_bin_it(l, el):
+    lewy, prawy = 0, len(l) - 1
+    while lewy < prawy:
+        srodek = floor((lewy + prawy) / 2)
+        if el <= l[srodek]:
+            prawy = srodek
+        else:
+            lewy = srodek + 1
+    if l[lewy] == el:
+        return lewy
+
+    return -1
+
+
+def sort_wstaw_bin_ros(lista):
+    """wersja binarna"""
+    for i in range(1, len(lista)):
+        el = lista[i]
+        k = wyszukaj_bin(lewy, prawy, lista, el)
+
+        # tworzenie listy z wstawionym elementem
+        # todo
+        lista =
+
+
 def main(args):
     lista = [4, 3, 7, 0, 2, 3, 1, 9, -4]
     lista1 = [4, 3, 7, 0, 2, 3, 1, 9, -4]
