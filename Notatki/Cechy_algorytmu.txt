@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-12T11:12:57+01:00
+
+====== Cechy algorytmu ======
+Created piątek 12 styczeń 2018
+
+== Własności algorytmów: ==
+1. **Poprawność**
+	a. Specyfikacja algorytmu (okreslenie celu algorytmymu, danych początkowych)
+	b. algorytm jest poprany jeżeli wnioskowanie indukcyjne  (metoda wyprowadzania wniosków na podstawie pojedyśczych wyników i rozszerzanie ich do ogółu) lub  wnioskowanie dedukcyjne (od ogółu do szczegółu) zachodzi prawidłowo
+	c. jest możliwe że alogorytm jest częsciowo poprawny
+	d. w testowaniu algorytmow musimu uwaząc na błędy logiczne 
+2. **Skończoność**
+3. **Złożoność**
+4. **Efektywność**
+
+
