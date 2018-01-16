@@ -13,6 +13,10 @@ Created piątek 12 styczeń 2018
 	d. w testowaniu algorytmow musimu uwaząc na błędy logiczne 
 2. **Skończoność**
 3. **Złożoność**
+Złożoność czasowa: zależy od liczby operacji niezbędnych do ukończenia algorytmu ( O(n), O(n^2), O(n!)) w zależności od ilości danych
+	b. Złożoność pamięciowa: zależy od ilości pamięci jaką potrzebuje algorytm do zakończenia działania 
 4. **Efektywność**
+	efektywność algorytmów zależy od typów danych
+
 
 
