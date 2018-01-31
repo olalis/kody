@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-31T12:00:36+01:00
+
+====== Python ======
+Created środa 31 styczeń 2018
+
+metoda obiktu zaczyna soe od "."
+
+**str.isdigit()** - sprawdza czy podany łańcuch jest cyfrą
+**str.join("łącznik")** - łączy znaki za pomocą łącznika
+**str.format()** - formatowane wyjście 
+
+**int()** - konwersja na liczbę całkowitą
+**str()** -  konwersja na napis
+
+**ord(znak)** - kod ASCII znaku
+**chr(Kod_ASCII)** - zwraca znak 
+
+**len(sekwencja)** -  długość sekwencji
+**sekwencja.reverse()** - odwrócenie kolejności obiektów
+
+**SEKWENCJE (ang. iterable)** - są to napisy(str), listy, słowniki itp.

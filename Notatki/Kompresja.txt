@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-31T12:09:55+01:00
+
+====== Kompresja ======
+Created środa 31 styczeń 2018
+
+ASCII
+UNICOD - zestaw znaków obejmującu wszystkie pisma używane na świecie 
+
+1. Kod Morse'a
+kod sos -  000111000
+
+Kompresja może być stratna i bezstratna
+1. kompresja bezstratną - takie który muszą być zapisywane w archiwach bez straty danych (.odt, .odc, .docx, .pptx, itd.)
+2. kompresja stratna - (stosowane w multimediach) (.png, .jpeg,  .mkv (definiuje że mogę w środku zawierać materiał wideo i audio), .mpeg)

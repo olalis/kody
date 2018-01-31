@@ -26,12 +26,15 @@ def zamiana1():
 
 
 def other2dec(liczba, podstawa):
-    """Zamiana podanej liczby na system dziesietn"""
+    """Zamiana podanej liczby na system dziesietny"""
     #  123(7) = 1 * 7^2 + 2 * 7^1 + 3
     liczba10 = 0
     potega = len(liczba) - 1
     for cyfra in liczba:
-        liczba10 += int(cyfra) * (podstawa ** potega)
+        if not cyfra.isdigit():
+            liczba10 += (ord(cyfra.upper()) - 55) * (podstawa ** potega)
+        else:
+            liczba10 += int(cyfra) * (podstawa ** potega)
         potega -= 1
 
 
