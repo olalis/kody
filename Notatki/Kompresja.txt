@@ -5,12 +5,33 @@ Creation-Date: 2018-01-31T12:09:55+01:00
 ====== Kompresja ======
 Created środa 31 styczeń 2018
 
-ASCII
-UNICOD - zestaw znaków obejmującu wszystkie pisma używane na świecie 
-
-1. Kod Morse'a
-kod sos -  000111000
-
 Kompresja może być stratna i bezstratna
 1. kompresja bezstratną - takie który muszą być zapisywane w archiwach bez straty danych (.odt, .odc, .docx, .pptx, itd.)
 2. kompresja stratna - (stosowane w multimediach) (.png, .jpeg,  .mkv (definiuje że mogę w środku zawierać materiał wideo i audio), .mpeg)
+
+**Bitrate** - ilość bitów (informacji) przesyłanych w ciągu sekundy (przepływność danych)
+MP3 128 b/s
+CD 256 b/s
+kb/s - kilobit
+Mb/s - megabit
+
+
+ASCII
+null - 0
+LF (Line Feed) - 10 (koniec lini)
+CR (Carrige Return) - 13 (Znak końca lini składa się z LF i CR)(koniec lini)
+
+UNICOD - zestaw znaków obejmującu wszystkie pisma używane na świecie 
+UTF-8 - kodowanie wykorzystujące od 1 do 6 bajtów
+
+Kod Morse'a (algorytm statystyczny)(bezstratny)
+kod sos  
+. . . _ _ _ . . . 000111000
+
+The rain in Spain falls mainly on the plain. ⇒ 44 znaki
+The rain <3,3>Sp<9,3> falls ma<11,3>ly on t<34,3>pl<15,3>. ⇒ 
+<o ile znaków musisz się cofnąć , ile znaków bierzesz>
+
+współczynnik kompresji = rozmiar danych skompressowanych ? rozmiar danych nieskompresowanych * 100%
+ile znaków wstecz ⇒ 6 bitów
+długość ciągu ⇒ 2 bity 
