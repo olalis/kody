@@ -28,10 +28,15 @@ Kod Morse'a (algorytm statystyczny)(bezstratny)
 kod sos  
 . . . _ _ _ . . . 000111000
 
-The rain in Spain falls mainly on the plain. ⇒ 44 znaki
-The rain <3,3>Sp<9,3> falls ma<11,3>ly on t<34,3>pl<15,3>. ⇒ 
-<o ile znaków musisz się cofnąć , ile znaków bierzesz>
+ALGORYTM SŁOWNIKOWY
+The rain in Spain falls mainly on the plain. ⇒ 44 znaki (bajty)
+The rain <3,3>Sp<9,3> falls ma<11,3>ly on t<34,3>pl<15,3>. ⇒ 33 znaki (bajty)
+<o ile znaków musisz się cofnąć , ile znaków bierzesz> ⇒ traktujemy jako jeden znak (1 bajt)
 
-współczynnik kompresji = rozmiar danych skompressowanych ? rozmiar danych nieskompresowanych * 100%
+współczynnik kompresji = rozmiar danych skompressowanych / rozmiar danych nieskompresowanych * 100%
 ile znaków wstecz ⇒ 6 bitów
 długość ciągu ⇒ 2 bity 
+
+współczynnik kompresji = 33/44 * 100% = 75%
+
+**Formaty plików arch**

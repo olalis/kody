@@ -22,7 +22,7 @@ def wyszukaj_liniowo(l, el):
 #   }
 
 
-def wyszukaj_binarnie(l, el):
+def wyszukaj_bin_it(l, el):
     lewy, prawy = 0, len(l) - 1
     while lewy < prawy:
         srodek = floor((lewy + prawy) / 2)
@@ -57,7 +57,7 @@ def main(args):
     print(lista)
     # print(wyszukaj_liniowo(lista, el))
     # assert (wyszukaj_liniowo(lista, 8) == -1)
-    print(wyszukaj_binarnie(lista, el))
+    print(wyszukaj_bin_it(lista, el))
     print(wyszukaj_bin_rek(0, len(lista) - 1, lista, el))
     return 0
 
