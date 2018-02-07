@@ -12,5 +12,14 @@ Odczytanie ukrytej informacji to **deszyfracja**(kryptoanaliza).
 Do odszyfrowania szyfrogramu potrzebny jest algorytm szyfrowania oraz klucz
 
 Rodzaje szyfrów:
+1. Podstawieniowye:
+	a. Szyfr Cezara, klucz to odległość od zastępnika 
+2. Przestawieniowe:
+	a. zapis tekstu w wierszach o ustalonej dlugości. Klucz to ilość kolumn na które dzielimy tekst.
+	TOBEORNOTTOBETHATISTHEQUESTION
+	TOBEORNOTT
+	OBETHATIST
+	HEQUESTION
+	AND.......
+	TOHAOBENBEQDETU.OOHE.
 
-	a. Szyfr Cezara

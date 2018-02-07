@@ -7,15 +7,15 @@ def szyfruj(tekst, klucz):
     szyfrogram = ""
     klucz = klucz % 26
     for znak in tekst:
-        if ord(znak)>64 and ord(znak)<91:
+        if ord(znak) > 64 and ord(znak) < 91:
             ascii = ord(znak) + klucz
             if ascii > 90:
                 ascii -= 26
-        if ord(znak)>96 and ord(znak)<123:
+        elif ord(znak) > 96 and ord(znak) < 123:
             ascii = ord(znak) + klucz
             if ascii > 122:
                 ascii -= 26
-        if ord(znak) == 32:
+        elif ord(znak) == 32:
             ascii = 32
         szyfrogram += chr(ascii)
     return szyfrogram
@@ -25,15 +25,15 @@ def deszyfruj(szyfrogram, klucz):
     tekst = ""
     klucz = klucz % 26
     for znak in szyfrogram:
-        if ord(znak)>64 and ord(znak)<91:
+        if ord(znak) > 64 and ord(znak) < 91:
             ascii = ord(znak) - klucz
             if ascii > 90:
                 ascii -= 26
-        if ord(znak)>96 and ord(znak)<123:
+        elif ord(znak) > 96 and ord(znak) < 123:
             ascii = ord(znak) - klucz
             if ascii > 122:
                 ascii -= 26
-        if ord(znak) == 32:
+        elif ord(znak) == 32:
             ascii = 32
         tekst += chr(ascii)
     return tekst
