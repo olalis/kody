@@ -27,12 +27,12 @@ def deszyfruj(szyfrogram, klucz):
     for znak in szyfrogram:
         if ord(znak) > 64 and ord(znak) < 91:
             ascii = ord(znak) - klucz
-            if ascii > 90:
-                ascii -= 26
+            if ascii < 65:
+                ascii += 26
         elif ord(znak) > 96 and ord(znak) < 123:
             ascii = ord(znak) - klucz
-            if ascii > 122:
-                ascii -= 26
+            if ascii < 97:
+                ascii += 26
         elif ord(znak) == 32:
             ascii = 32
         tekst += chr(ascii)
