@@ -23,3 +23,22 @@ Rodzaje szyfrów:
 	AND.......
 	TOHAOBENBEQDETU.OOHE.
 
+
+**Szyfrowanie aksymetryczne:**
+Protokół https (szyfrowana wersja http)
+ssl
+tls
+certyfikat - tozsamość strony
+
+szyfrowanie poczty elektoronicznej 
+
+kryptografia klucza publicznego - ciąg cyfr który podajemy do wiadomości publicznej 
+klucz prywatny
+
+algorytm rsa 
+
+podpis elektroniczny 
+
+ssh 
+
+

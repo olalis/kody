@@ -44,11 +44,16 @@ def deszyfruj(szyfrogram, klucz):
 
 
 def main(args):
-    tekst = input("Podaj tekst: ")
-    klucz = int(input("Podaj klucz: "))
-    szyfrogram = szyfruj(tekst, klucz)
-    print(szyfrogram)
-    print(deszyfruj(szyfrogram, klucz))
+    # tekst = input("Podaj tekst: ")
+    # klucz = int(input("Podaj klucz: "))
+    # szyfrogram = szyfruj(tekst, klucz)
+    # print(szyfrogram)
+    # print(deszyfruj(szyfrogram, klucz))
+
+    tekst1 = input("Podaj tekst: ")
+    klucz1 = int(input("Podaj klucz: "))
+    print(deszyfruj(tekst1, klucz1))
+
     return 0
 
 

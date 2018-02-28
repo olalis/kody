@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-02-27T12:58:52+01:00
+
+====== zadanie dom ======
+Created wtorek 27 luty 2018
+
+Zaszyfruj swoje dane osobowe, tj.:
+imię, nazwisko, data urodzenia, miejsce urodzenia
+przy urzyciu trzech szyfrów 
+tj. szyfru Cezara, szyfru podstawieniowego oraz szyfru Vigenere'a
