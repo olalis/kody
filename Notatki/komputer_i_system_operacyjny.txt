@@ -5,19 +5,36 @@ Creation-Date: 2018-03-02T11:02:14+01:00
 ====== Komputer i system operacyjny ======
 Created piątek 02 marzec 2018
 
-Logiczny model komputera
+== Logiczny model komputera: ==
 architektura von Neumanna:
-1. procesor - logiczna jednostka artmetyczna
+1. **Procesor - logiczna jednostka artmetyczna**
 	a. jeśli mamy napięcie od 1 do 3.5 V to wtedy jest logiczne 1 a jeśli mamy napięcie mniejsze to mamy logiczne 0
 	b. procesor składa sie z rejestrów. jednym z nich jest akumulator. rozmiar rejestru współczesnego procesora to 64 bity.
-2. Pamięć RAM (swobodnego dostępu)
-3. Jednostka sterująca
+2. **Pamięć RAM (swobodnego dostępu)**
+3. **Jednostka sterująca**
 	a. synchronizuje prace logicznych modułów komputera
 	b. za pomocą szyny systemowej jednistka komunikuje sie z pamięcią i procesorem. Szyna systemowa daje dopowiednie taktowanie 
 	c. szyna danych szyna służąca do przesyłania tych danych w odpowiedniej częstotliwości 
 	d. szyna adresowa - decyduje gdzie trafiają konkretne dane i je odczytuje dzięki konkretnym adresom komórek
 	e. część damych bierze się z pamięci ROM (pamięc tylko do odczytu) - ROM w odróżnieniu od RAMu zapisuje dane na stałe
-4. urządzenia wejścia i wyjścia
+4. **Urządzenia wejścia i wyjścia**
 	a. BIOS - opdstawowy system wejścia-wyjścia
 	b. UEFI - interfejs pomiędzy systemem operacyjny, a firmware, opracowany jako następca BIOS-a w komputerach osobistych. 
 
+
+== System operacyjny: ==
+1. **Otwarty system operacyjny:**
+	a. jest on jest uniwersalny(np. linux) - to znaczy taki który może pracować na wielu architekurach sprzętowych (debian - najstarszy system linuxowy)
+		1. Rodzaje architektur:
+			a. architektura AMD64 lub x64 lub x84-64 - architektura 64 bitowa
+			b. architektura i 385 lub x86 -  architerkura 32 bitowa 
+			c. architektura ARM - stworzony do wytwarzania mikro komputerów
+	b. open source - żródła danego oprogramowania są publicznie dostępne 
+2. **Funkcje systemu operacyjnego:**
+	a. hardwar, softwere, user są łączeni przez system operacyjny
+	b. wirtalizacja urządrzeń
+	c. zarządzanie zasobami sprzętu (pierwsze systemy były projektowane dla jednego urzytkownika a dzisiejsze są juz przeznaczone dla wielu urzytkowników)
+	d. zwykły urzytkownik kojarzy system operacyjny po interfejsie. interfejs tekstowy był udestępniany w formie terminala. Windows upowszechnił interfejs graficzny(okienkowy)
+3. **Składniki systemu operacyjnego** 
+	a. Jądro(monolityczne lub chybrydowe) - warstwa oprogramowania operujące sie bezpośrednio na sprzęcie. Udostępnia inrormacje w sposób wirtualny. 
+	b. Sterowniki urządrzeń zewnętrzych
