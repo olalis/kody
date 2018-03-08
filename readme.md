@@ -1,1 +1,1 @@
-informatyka.
+informatyka
