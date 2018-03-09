@@ -38,3 +38,25 @@ architektura von Neumanna:
 3. **Składniki systemu operacyjnego** 
 	a. Jądro(monolityczne lub chybrydowe) - warstwa oprogramowania operujące sie bezpośrednio na sprzęcie. Udostępnia inrormacje w sposób wirtualny. 
 	b. Sterowniki urządrzeń zewnętrzych
+
+== Systemy operacyjne: ==
+1. **MS-DOS:**
+	a. atybyty plilów:
+		1. a - zapisany na dysku
+		2. r - tylko do odczytu
+		3. h - plik ukryty
+		4. s - plik systemowy
+	b. był tak skonstruowany że nie był w stanie obsłużyć więcej niż 640 kB danych
+	c. wykorzystywał tryb rzeczywisty procesora
+2. **Windows 3.11:**
+	a. posiada interfejs graficzny 
+	b. posiada pasek tytułu 
+	c. posiada menu klasyczne
+	d. przyciki minimalalizacji/maksymalizacji
+	e. przycik wyjścia 
+	f. ikony 
+3. Windows 8:
+	a. interfejs kafelkowy - który sie nie sprawdził 
+4. Windows 10:
+5. **Linux:**
+	3. nie pothebuje rozszerzeń plików
