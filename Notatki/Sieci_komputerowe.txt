@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-03-20T12:54:08+01:00
+
+====== Sieci komputerowe ======
+Created wtorek 20 marzec 2018
+
+**host** - dowolne urządzenie podpięte do sieci (klient i serwer)
+
+**Klient-serwer:**
+1. kilent - komputer ktory wysyła reządania do serwera
+2. serwer - podmiot udostępniający i tworzący 
+
+Na jednym hoście można instalowac wiele usług 
+
+== Rodzaje sieci: ==
+1. Len - sieć lokalna 
+	a. eternet 
+	b. kabel sieciowy ma końcówke RJ45
+	c. switch - przełącznik sieciowy
+	d. Topologia gwiazdy - zazwyczaj stosowana architektura sieci 
+	e. ruter - ma za zadanie połączyć siec lokalna z siecią zewnętrzną (ma zawsze dwa interfejsy)
+2. WAN - sieć rozległa 
+
+Każdy komputer musi posiadzać adres IP
+Trasa domyślna - gateway (adres rutera) 
+Adres serwera DNS
+
+== Internet to jest sieć sieci ==
+sieć szkieletowa 
+
+Protokół sieciowy (http, ftp, tcp, IP)
+
+Na jednym serwerza lub kliencie może być uruchomoione wile rzeczy ale na róznych portacvh  

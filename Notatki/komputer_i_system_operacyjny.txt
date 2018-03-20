@@ -55,8 +55,22 @@ architektura von Neumanna:
 	d. przyciki minimalalizacji/maksymalizacji
 	e. przycik wyjścia 
 	f. ikony 
-3. Windows 8:
+3. **Windows 8:**
 	a. interfejs kafelkowy - który sie nie sprawdził 
-4. Windows 10:
+4. **Windows 10:**
 5. **Linux:**
-	3. nie pothebuje rozszerzeń plików
+	a. nie pothebuje rozszerzeń plików
+
+== Szczegółowe omównienie systemu Linux: ==
+1. Linux oznacza jądro systemu 
+2. Windows i IOS jest systemem własnościowym
+3. Linux jest tworzony na podstawie otwartego oprogramowania (open source), jest tworzony przez ludzi z całego świata
+4. dystrybycja linuxa składa sie z jadra oraz oprogramowania dodatkowego 
+5. Najważniejsze dystrybujcje linuxa to debian, ubuntu
+6. program rufus słóży do wypalania obrazów na pendrive
+7. Partycja to jedna z części podzielonego dysku
+
+
+
+
+
