@@ -32,3 +32,25 @@ sieć szkieletowa
 Protokół sieciowy (http, ftp, tcp, IP)
 
 Na jednym serwerza lub kliencie może być uruchomoione wile rzeczy ale na róznych portacvh  
+
+== Model TCP/IP ==
+1. Aplikacja 
+	a. http/https
+	b. ftp - służy do przesyłania plików
+	c. POP/IMAP- wykorzystywany do odbioru poczty 
+	d. SSH - protokół bezpiecznej komunikacja sieciowej  
+	e. DNS
+2. Prezentacja 
+3. Sesja
+
+
+mvps hosts
+
+== DNS ==
+rozproszona baza danych DNS jest inteksowana nazwami domen 
+TLD - top level compleain - domeny najwyższego poziomu 
+
+adres URL:
+Zbudowany z protokołu  ://  nazwa domena  /  poddomena   /   poddomena  / ........
+
+
