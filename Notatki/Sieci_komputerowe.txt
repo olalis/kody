@@ -31,7 +31,7 @@ sieć szkieletowa
 
 Protokół sieciowy (http, ftp, tcp, IP)
 
-Na jednym serwerza lub kliencie może być uruchomoione wile rzeczy ale na róznych portacvh  
+Na jednym serwerza lub kliencie może być uruchomoione wiele rzeczy ale na róznych portach  
 
 == Model TCP/IP ==
 1. Aplikacja 
@@ -42,7 +42,15 @@ Na jednym serwerza lub kliencie może być uruchomoione wile rzeczy ale na rózn
 	e. DNS
 2. Prezentacja 
 3. Sesja
+4. Transport 
+	a. TCP: 
+		1. jest połączeniowy - tworzy połączenia 
+		2. jest niezawodny dzięki numerowi sekwencyjnemu i sumie kontrolnej 
+		3. jest stanowy 
+	b. UDP
 
+Port sieciowy:
+porty o nnumera 0 - 1000 porty do których przypisano nazwy 
 
 mvps hosts
 
@@ -52,5 +60,13 @@ TLD - top level compleain - domeny najwyższego poziomu
 
 adres URL:
 Zbudowany z protokołu  ://  nazwa domena  /  poddomena   /   poddomena  / ........
+
+== Protokół sieciowy IP: ==
+składa się z 32 bitów 
+Jest pula adresów prywatnych i publicznych 
+pierwszre trzy cyfry to adres sieci który jest wyznaczany za pomocą maski 
+do jednej sieci może być popięte max 254
+192.168.3.255 →BROADCAST 
+NETWORK ADRESS TANSLATION 
 
 
