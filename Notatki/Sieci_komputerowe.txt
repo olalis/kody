@@ -68,5 +68,3 @@ pierwszre trzy cyfry to adres sieci który jest wyznaczany za pomocą maski
 do jednej sieci może być popięte max 254
 192.168.3.255 →BROADCAST 
 NETWORK ADRESS TANSLATION 
-
-
