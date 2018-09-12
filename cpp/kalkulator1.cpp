@@ -31,7 +31,7 @@ float dziel (float g, float h)
         return 0;
     }
     return g/h;
-}
+}     
 
 int main(int argc, char **argv)
 {
@@ -50,15 +50,15 @@ int main(int argc, char **argv)
         {
             cout << dodaj(a, b)<< endl;
         }
-        if (znak == '-')
+        else if (znak == '-')
         { 
             cout << odejmij(a, b) << endl;
         }
-        if (znak == '*')
+        else if (znak == '*')
         { 
             cout << mnoz(a, b) << endl;
         }
-        if (znak == '/')
+        else if (znak == '/')
         { 
             cout << dziel(a, b) << endl;
         }
