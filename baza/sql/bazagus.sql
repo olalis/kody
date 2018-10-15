@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS dane_demograficzne;
 DROP TABLE IF EXISTS powierzchnie;
 
 CREATE TABLE miasta (
-    id_miasta INTEGER PRIMARY KEY AUTOINCREMENT, --(nazwa, typ danych, dodatkowe opcje)
+    id_miasta INTEGER PRIMARY KEY, --(nazwa, typ danych, dodatkowe opcje)
     nazwa_miasta TEXT(30),
     wojewodztwo TEXT(30)
 );
@@ -28,8 +28,8 @@ CREATE TABLE powierzchnie(
     FOREIGN KEY (id_miasta) REFERENCES miasta(id_miasta)
 );
 
--- sqlite3 baza.db < bazagus.sql
--- sqlite3 baza.db 
+--sqlite3 baza.db < bazagus.sql
+--sqlite3 baza.db 
 --sqlite> .table - wyświetla tabele
 --sqlite> .schema - wtświetla klauzule SQL
 --sqlite> .qute -wyjście z interpretera
