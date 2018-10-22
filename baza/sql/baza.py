@@ -11,7 +11,6 @@ def czytaj_dane(plik, separator=","):
         print(tresc)
         for rekord in tresc:
             dane.append(rekord)
-    print(dane)
     return dane
 
 
@@ -22,9 +21,13 @@ def main(args):
     with open('bazagus.sql', 'r') as plik:
         cur.executescript(plik.read())
 
-    dane = czytaj_dane('miasta.csv', ',')
-    dane.pop(0) # usuń pierwszy rekord z listy
-    cur.executemany('INSERT INTO miasta VALUES(?, ?, ?)', dane)
+    # ~dane = czytaj_dane('miasta.csv', ',')
+    # ~dane.pop(0) # usuń pierwszy rekord z listy
+    # ~cur.executemany('INSERT INTO miasta VALUES(?, ?, ?)', dane)
+    
+    dane = czytaj_dane('dane_demograficzne.csv', ',')
+    dane.pop(0)
+    cur.executemany('INSERT INTO dane_demograficzne VALUES(?, ?, ?, ?, ?, ?)', dane)
     
     con.commit()
     con.close()
