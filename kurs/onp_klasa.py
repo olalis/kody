@@ -8,10 +8,10 @@ from stos_obj import Stos
 
 class ONPKlasa(Stos):
     
-    def __init__(self, onp_str='', a_str=''):  # przesĹonienie konstruktora rodzica
-        super().__init__(10)  # wywoĹanie konstruktora rodzica
+    def __init__(self, onp_str='', a_str=''):  # przesłonienie konstruktora rodzica
+        super().__init__(10)  # wywołanie konstruktora rodzica
         if not self.czy_poprawne(onp_str):
-            print("BĹÄd wyraĹźenia!")
+            print("Błąd wyrażenia!")
             onp_str = ''
         self.onp_str = onp_str
         self.a_str = a_str
@@ -25,7 +25,7 @@ class ONPKlasa(Stos):
         return True
 
     def oblicz_onp(self):
-        onp = self.onp_str.split(" ")
+        onp = self.onp_str.strip(" ")
     
         for el in onp:
            if el.isdigit():
@@ -59,7 +59,7 @@ class ONPKlasa(Stos):
             elif znak == ')':
                 while self.peek() != '(':
                     self.onp_str += self.pop() + ' '
-                self.pop()  # usuniÄcie nawaisu otwierajÄcego ze stosu
+                self.pop()  # usunięcie nawaisu otwierającego ze stosu
             elif znak in operatory:
                 while not self.isEmpty():
                     if self.p(znak) == 3 or self.p(znak) > self.p(self.peek()):
@@ -72,7 +72,7 @@ class ONPKlasa(Stos):
             self.onp_str += self.pop() + ' '
 
 def main(args):
-    #onp = input("Podaj wyr. ONP, oddzielajÄc operandy i operatory spacjami:\n")
+    #onp = input("Podaj wyr. ONP, oddzielając operandy i operatory spacjami:\n")
     #o1 = ONPKlasa(onp)
     #o1.oblicz_onp()
     #print("Obliczenia: ", o1.log)
