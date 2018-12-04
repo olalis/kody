@@ -1,6 +1,4 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
 from PyQt5.QtWidgets import QTableView, QPushButton
 from PyQt5.QtWidgets import QHBoxLayout, QVBoxLayout
 from PyQt5.QtCore import Qt
@@ -9,7 +7,7 @@ from PyQt5.QtWidgets import QLabel, QLineEdit
 from PyQt5.QtWidgets import QGridLayout
 
 
-class Ui_Widget(object):
+class Ui_Widget():
 
     def setupUi(self, Widget):
         Widget.setObjectName("Widget")
@@ -20,11 +18,18 @@ class Ui_Widget(object):
         # przyciski Push ###
         self.logujBtn = QPushButton("Za&loguj")
         self.koniecBtn = QPushButton("&Koniec")
+        self.dodajBtn = QPushButton("&Dodaj")
+        self.dodajBtn.setEnabled(False)
+        self.zapiszBtn = QPushButton("&Zapisz")
+        self.zapiszBtn.setEnabled(False)
 
         # układ przycisków Push ###
         uklad = QHBoxLayout()
         uklad.addWidget(self.logujBtn)
+        uklad.addWidget(self.dodajBtn)
+        uklad.addWidget(self.zapiszBtn)
         uklad.addWidget(self.koniecBtn)
+
 
         # główny układ okna ###
         ukladV = QVBoxLayout(self)
@@ -34,6 +39,8 @@ class Ui_Widget(object):
         # właściwości widżetu ###
         self.setWindowTitle("Prosta lista zadań")
         self.resize(500, 300)
+
+
 class LoginDialog(QDialog):
     """ Okno dialogowe logowania """
 
@@ -53,10 +60,10 @@ class LoginDialog(QDialog):
         # układ główny ###
         uklad = QGridLayout(self)
         uklad.addWidget(loginLbl, 0, 0)
-        uklad.addWidget(self.login, 1, 0)
-        uklad.addWidget(hasloLbl, 2, 0)
-        uklad.addWidget(self.haslo, 3, 0)
-        uklad.addWidget(self.przyciski, 4, 0, 4, 0)
+        uklad.addWidget(self.login, 0, 1)
+        uklad.addWidget(hasloLbl, 1, 0)
+        uklad.addWidget(self.haslo, 1, 1)
+        uklad.addWidget(self.przyciski, 2, 0, 2, 0)
 
         # sygnały i sloty ###
         self.przyciski.accepted.connect(self.accept)
@@ -78,4 +85,3 @@ class LoginDialog(QDialog):
         ok = dialog.exec_()
         login, haslo = dialog.loginHaslo()
         return (login, haslo, ok == QDialog.Accepted)
-
