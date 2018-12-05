@@ -6,6 +6,7 @@
 
 from flask import Flask, g
 from flask import render_template
+from modele import *
 
 app = Flask(__name__)
 app.config.update(dict(
@@ -13,9 +14,24 @@ app.config.update(dict(
     TYTUL = 'Czat'
 ))
 
+@app.before_request
+def before_request():
+    g.db = baza
+    g.db.connect()
+
+@app.after_request
+def after_request(response):
+    g.db.close()
+    return response
+
 @app.route("/")
 def index():
     return render_template('index.html')
+
+@app.route("/quiz")
+def quiz():
+    pytania = Pytanie.select().annotate(Odpowiedz)
+    return render_template('quiz.html', query = pytania)
 
 @app.route("/klasa")
 def klasa():
