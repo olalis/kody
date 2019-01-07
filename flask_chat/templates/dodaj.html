@@ -1,26 +1,19 @@
-<!DOCTYPE html>
-<html lang="pl">
-<!--
-   klasa.html
--->
+{% extends "szablon.html" %}
+{% block tytul %} Quiz {% endblock %}
+{% block h1 %} Quiz - dodawanie pytań {% endblock %}
+{% block tresc %} 
 
-<head>
-<meta charset="utf-8" />
-<title>Quiz</title>
-<meta name="generator" content="Geany 1.32" />
-</head>
+    <h2>Dodaj pytanie</h2>
 
-<body>
-    <h1>Quiz - dodawanie pytań</h1>
     <form method = "POST" action = "">
-    {{form.csrf_token}}
+        <div class="form-group">
+        {{form.csrf_token}}
     
-    {{form.pytanie.label}}<br>
-    {{form.pytanie}}<br>
-    <br>
-    {{form.kategoria.label}}<br>
-    {{form.kategoria}}<br>
-    <br>
+        {{form.pytanie.label}}
+        {{form.pytanie(class_="form-control")}}
+        {{form.kategoria.label}}
+        {{form.kategoria(class_="form-control")}}
+        
     <label>Podaj odpowiedzi i zaznacz poprawną</label>
     <ol>
     {%for o in form.odpowiedzi %}
@@ -29,10 +22,8 @@
     </ol>
     
     
-    <input type = 'submit' value = 'Zapisz pytanie'>
-    
+    <input type = 'submit' class="btn btn-default" value = 'Zapisz pytanie'>
+    </div>
     </form>
     
-</body>
-
-</html>
+{% endblock %}
