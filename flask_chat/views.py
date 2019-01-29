@@ -5,6 +5,7 @@
 #  
 from flask import Flask
 from flask import render_template, request, redirect, url_for, flash
+from flask import abort
 from modele import *
 from forms import *
 
@@ -66,4 +67,27 @@ def dodaj():
         flash_errors(form)
     return render_template('dodaj.html', form=form)
 
-    
+def get_or_404(pid):
+    try:
+        p = Pytanie.get_by_id(pid)
+        return p
+    except Pytanie.DoesNotExist:
+        abort(404)
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+@app.route('/usun/<int:pid>', methods=['GET', 'POST'])
+def usun(pid):
+    """Usuwanie pytania o podanym id"""
+    p = get_or_404(pid)
+    if request.method == 'POST':
+        flash('Usunięto pytanie {}'.format(p.pytanie), 'sukces')
+        for o in Odpowiedz.select().where(Odpowiedz.pytanie == p.id):
+            o.delete_instance()
+        p.delete_instance()
+        return redirect(url_for('index'))
+    return render_template('pytanie_usun.html', pytanie=p)
+        
+        
