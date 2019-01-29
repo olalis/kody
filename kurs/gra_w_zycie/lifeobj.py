@@ -34,6 +34,7 @@ class LifeGra(object):
         pygame.init()
         self.plansza = Plansza(szer * roz, wys * roz)
         self.populacja = Populacja(szer, wys, roz)
+        self.fpsClock = pygame.time.Clock()
 
     def uruchom(self):
         """ Główna pętla programu """
@@ -46,7 +47,14 @@ class LifeGra(object):
             if event.type == MOUSEMOTION or event.type == MOUSEBUTTONDOWN:
                 self.populacja.obsluz_mysze()
             
+            if event.type == KEYDOWN and event.key == K_RETURN:
+                self.uruchomiona = True
+            
             self.plansza.rysuj(self.populacja)
+            
+            if getattr(self, "uruchomiona", None):
+                self.populacja.wylicz_generacje
+            self.fpsClock.tick(15)
 
 DEAD = 0
 ALIVE = 1
@@ -81,7 +89,8 @@ class Populacja():
         for x, y in self.zywe_komorki():
             roz = (self.roz, self.roz)
             pozycja = (x * self.roz, y * self.roz)
-            kolor = (randint(0, 255), randint(0, 255), randint(0, 255))
+            kolor = ( 255, 255, 255)
+            #kolor = (randint(0, 255), randint(0, 255), randint(0, 255))
             grubosc = 1
             pygame.draw.rect(pow, kolor, Rect(pozycja, roz), grubosc)
 
@@ -109,6 +118,22 @@ class Populacja():
                     j = self.wys - 1
                     
                 yield self.generacja [i][j]
+    
+    def wylicz_generacje(self):
+        """Wyliczmy nastepna generację swowjej populacji"""
+        nowa_gen = self.utworz_generacje()
+        for x in range(len(self.generacja)):
+            kolumna = self.generacja[x]
+            for y in range(len(kolumna)):
+                ileZywych = sum(self.zwroc_sasiada(x, y))
+                if ileZywych == 3:
+                    nowa_gen[x][y] = ALIVE
+                elif ileZywych == 2:
+                    nowa_gen[x][y] = kolumna[y]
+                else:
+                    nowa_gen[x][y] = DEAD
+        self.generacja = nowa_gen
+        
 if __name__ == "__main__":
     gra = LifeGra(80, 40)
     gra.uruchom()
