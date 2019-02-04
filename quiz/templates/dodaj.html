@@ -1,10 +1,29 @@
 {% extends "szablon.html" %}
-{% block tytul %}Quiz – dodawanie potań{% endblock %}
-{% block h1 %}Quiz – dodawanie pytań{% endblock %}    
-{% block tresc %}
+{% block tytul %} Quiz {% endblock %}
+{% block h1 %} Quiz - dodawanie pytań {% endblock %}
+{% block tresc %} 
 
     <h2>Dodaj pytanie</h2>
 
-{% include "pytanie_form.html" %}
-
+    <form method = "POST" action = "">
+        <div class="form-group">
+        {{form.csrf_token}}
+    
+        {{form.pytanie.label}}
+        {{form.pytanie(class_="form-control")}}
+        {{form.kategoria.label}}
+        {{form.kategoria(class_="form-control")}}
+        
+    <label>Podaj odpowiedzi i zaznacz poprawną</label>
+    <ol>
+    {%for o in form.odpowiedzi %}
+        <li>{{ o }}</li>
+    {% endfor %}
+    </ol>
+    
+    
+    <input type = 'submit' class="btn btn-default" value = 'Zapisz pytanie'>
+    </div>
+    </form>
+    
 {% endblock %}
