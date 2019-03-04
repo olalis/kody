@@ -4,7 +4,10 @@
 
 
 #include <iostream>
+#include <math.h>
+
 using namespace std;
+
 
 class Wektor {
     private:
@@ -13,6 +16,7 @@ class Wektor {
     public:
         void pobierz(int);
         void wypisz();
+        void dlugosc();
         friend Wektor dodaj(Wektor, Wektor);
         friend Wektor iloczyn (Wektor);
 };
@@ -39,6 +43,11 @@ Wektor iloczyn(Wektor w1, int a){
     w2.x = a * w1.x;
     w2.y = a * w1.y;
     return w2;
+}
+
+void Wektor ::dlugosc(Wektor w1, Wektor w2){
+    int d = 0;
+    d = sqrt ((w1.x - w2.x)** + (w1.y - w2.y)**)
 }
 
 int main(int argc, char **argv)
