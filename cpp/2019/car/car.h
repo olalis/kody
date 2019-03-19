@@ -1,20 +1,26 @@
 #include <iostream>
 #include <cstdlib>
-#include <string>
+#include "osoba.h"
 
-#ifendef __CAR_H_
+#ifndef __CAR_H_
 #define __CAR_H_
+
+using namespace std;
+
 class Car{
     private:
-     string marka;
-     string model;
-     int rocznik;
-     int przebieg;
+        string marka;
+        string model;
+        int rocznik;
+        int przebieg;
+        Osoba osoby[3];
+        int ile;
     public:
-        Car(); //konstruktor
-        Car(string, string, int, int); //konstruktor
+        Car();
+        Car(string, string, int, int);
         void dodaj();
         void dane();
+        void laduj(int);
+        void pasazerowie();
 };
-
-#endif __CAR_H_
+#endif
